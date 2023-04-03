@@ -10,8 +10,21 @@ local keymap = vim.keymap -- for conciseness
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>")
 
+-- better up and down
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- Navigate buffers
+keymap.set("n", "<S-l>", ":bnext<CR>")
+keymap.set("n", "<S-h>", ":bprevious<CR>")
+
+-- Close buffers
+keymap.set("n", "<S-q>", ":bd<CR>")
+
+-- Move line up/down
+keymap.set("n", "<leader>j", "ddp")
+keymap.set("n", "<leader>k", "ddkP")
+
 ----------------------
 -- Plugin Keybinds
 ----------------------
